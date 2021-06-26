@@ -1,0 +1,20 @@
+version: '3'
+services:
+  notebook:
+    image: jupyterhub-com
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    user: root
+    ports:
+      - '8888:8888'
+    environment: 
+      - GRANT_SUDO=yea
+      - TZ=Asia/Tokyo
+      - JUPYTER_ENABLE_LAB=yes
+      
+    volumes:
+      - ./src:/home/jovyan/work
+
+    command: start-notebook.sh --NotebookApp.token=''
