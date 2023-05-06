@@ -1,2 +1,3 @@
 # Python_Tutorial
-Pythonに関するコード置き場(対して使わない試しのコード)
+This Repository is a place for storing program sources related to several articles.
+
